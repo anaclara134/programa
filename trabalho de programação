@@ -1,0 +1,24 @@
+O que significa encapsular dados em uma classe?
+Encapsular significa proteger os atributos da classe, permitindo que eles sejam acessados ou modificados apenas por métodos da própria classe (
+Qual é a diferença entre um atributo public, protected e private?
+public	Pode ser acessado de qualquer lugar do programa
+protected	Pode ser acessado pela própria classe e pelas classes filhas (herança).
+private	Só pode ser acessado dentro da própria classe.
+Por que usamos getAtributo() ao invés de acessar $objeto->atributo diretamente?
+Porque os atributos geralmente são private, então não podem ser acessados diretamente fora da classe. O método get permite acessar o valor de forma controlada, mantendo o encapsulamento
+O que um método set pode fazer além de simplesmente atribuir um valor?
+um set pode validar dados, impedir valores invalidos, formatar informações, exibir menagens de erro
+Dê um exemplo prático de validação dentro de um set.
+private $idade;
+public function setIdade($idade){
+    if($idade >= 0){
+        $this->idade = $idade;
+    } else {
+        echo "Idade inválida!";
+    }
+}
+
+Um atributo private pode ser lido diretamente fora da classe." (F)
+"Getters e setters so fazem sentido quando os atributos sao private." (V)
+"Encapsulamento aumenta a seguranca e a manutencao do codigo." (V)
+"E possivel ter um getter sem ter um setter para o mesmo atributo." (V)
